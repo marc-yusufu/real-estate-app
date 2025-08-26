@@ -2,9 +2,9 @@
 //last watch 21:18
 import Link from "next/link";
 import Image from "next/image";
-import { Flex, Box, Text, Button } from "@chakra-ui/react";
+import { Flex, Box, Text, Button, ChakraProvider } from "@chakra-ui/react";
 
-const Banner = ({purpose, title1, title2, desc1, desc2, linkName, buttonText, imageUrl}) =>{ //props values to be passed here
+const Banner = ({purpose, title1, title2, desc1, desc2, linkName, buttonText, imageUrl}) =>( //props values to be passed here
   <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="18">
     <Image src={imageUrl} width={500} height={300} alt="banner"/>
     <Box p="5">
@@ -17,7 +17,7 @@ const Banner = ({purpose, title1, title2, desc1, desc2, linkName, buttonText, im
       </Button>
     </Box>
   </Flex>
-}
+)
 
 export default function Home() {
   return (
@@ -42,7 +42,7 @@ export default function Home() {
         desc2="and more"
         buttonText="Explore Buying"
         linkName="/search?purpose=for-sale"
-        imageUrl="rl='https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008"
+        imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008"
       />
     </div>
   );

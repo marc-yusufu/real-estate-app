@@ -26,8 +26,8 @@ const Banner = ({purpose, title1, title2, desc1, desc2, linkName, buttonText, im
 export default async function Home() {
 
   //fetching properties for rent and sale
-  const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=10`)
-  const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=10`)
+  const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`)
+  const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`)
 
   const forSale = propertyForSale?.hits || [];
   const forRent = propertyForRent?.hits || [];

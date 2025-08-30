@@ -2,12 +2,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
-import { Flex, Box, Text, defaultBaseConfig } from "@chakra-ui/react";
-import { Avatar } from "@chakra-ui/react";
+import { Flex, Box, Text, defaultBaseConfig, AvatarFallback } from "@chakra-ui/react";
+//import { Avatar } from "@chakra-ui/react";
 import { BsFillGrid1X2Fill, BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
 import { FaBed, FaBath } from "react-icons/fa";
 import millify from "millify";
+import * as Avatar from "@radix-ui/react-avatar"
 
 import DefaultImage from '../assets/images/house.jpg'
 import { FaB } from "react-icons/fa6";
@@ -35,12 +36,13 @@ const Property = ({property: {coverPhoto, price, rentFrequency, rooms, title, ba
                             <Box paddingRight="3" color="green.400">{isVerified && <GoVerified/>}</Box>
                             <Text fontWeight="bold" fontSize="lg">R {millify(price)}{rentFrequency && `/${rentFrequency}`}</Text>
                         </Flex>
-                        <Box>
-                            {logoUrl? (
-                               <Avatar size="sm" src={typeof logoUrl === "string" ? logoUrl : undefined} name={agency?.name || 'Agency'}/> 
-                            ) : (
-                                <Avatar size="sm" name={agency?.name || 'Agency'} />
-                            ) }
+                        <Box w="100px">
+                            <Avatar.Root className="overflow-hidden select-none w-[45px] h-[45px] bg-black/30">
+                                <Avatar.Image src={logoUrl} className="w-[100%] h-[100%] object-cover rounded-inherit"/>
+                                <Avatar.Fallback delayMs={600} className="w-full h-full flex items-center justify-center bg-white text-[var(--violet-11)] text-[15px] leading-none font-medium">
+                                    🏠
+                                </Avatar.Fallback>
+                            </Avatar.Root>
                             
                         </Box>
                     </Flex>

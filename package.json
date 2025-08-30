@@ -13,6 +13,7 @@
     "@chakra-ui/theme-utils": "^2.0.21",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@radix-ui/react-avatar": "^1.1.10",
     "axios": "^1.11.0",
     "framer-motion": "^12.23.12",
     "millify": "^6.1.0",
@@ -29,6 +30,6 @@
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.0",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4.1.12"
   }
 }

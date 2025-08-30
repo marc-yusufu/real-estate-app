@@ -1,6 +1,8 @@
-/* @import "tailwindcss";
+@import "tailwindcss";
+@import "@radix-ui/colors/black-alpha.css";
+@import "@radix-ui/colors/violet.css";
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }

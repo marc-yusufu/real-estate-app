@@ -1,7 +1,9 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
-//import "./globals.css";
+import "./globals.css";
 import { Provider } from "@/components/ui/provider";
+import { Avatar } from "@radix-ui/react-avatar";
+import { AvatarContext } from "@chakra-ui/react";
 
 
 const geistSans = Geist({
@@ -23,11 +25,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        
         <Provider>
           {children}
-        </Provider>
-        
+        </Provider>     
       </body>
     </html>
   );

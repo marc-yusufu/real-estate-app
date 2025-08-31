@@ -1,5 +1,6 @@
 //Index.js
 //last watch 21:18
+
 import Link from "next/link";
 import Image from "next/image";
 import { Flex, Box, Text, Button, ChakraProvider } from "@chakra-ui/react";
@@ -60,7 +61,11 @@ export default async function Home() {
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008"
       />
 
-      {forSale.map((property) => <Property property={property} key={property.id}/> )}
+      <Flex flexWrap="wrap">
+        {forSale.map((property) => <Property property={property} key={property.id}/> )}
+      </Flex>
+
+      
     </Box>
   );
 }

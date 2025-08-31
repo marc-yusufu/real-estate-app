@@ -2,11 +2,20 @@
 
 import { ChakraProvider, defaultSystem } from '@chakra-ui/react'
 import { ColorModeProvider } from './color-mode'
+import ChakraProviders from '../../../components/chakraProvider'
 
-export function Provider(props) {
+import Router from 'next/router'
+import Head from 'next/head'
+import nProgress from 'nprogress'
+
+import RootLayout from '@/app/layout'
+
+export function Provider({children}) {
   return (
-    <ChakraProvider value={defaultSystem}>
-      <ColorModeProvider {...props} />
-    </ChakraProvider>
+        <ChakraProviders> 
+            <ColorModeProvider>
+                {children} {/* Render the children */}
+            </ColorModeProvider>
+        </ChakraProviders>
   )
 }

@@ -5,6 +5,7 @@ import { Provider } from "@/components/ui/provider";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import ChakraProviders from "../../components/chakraProvider";
+import NavBar from "../../components/NavBar";
 
 
 import Head from "next/head";
@@ -39,7 +40,7 @@ export default function RootLayout({ children }) {
         
           <Box maxWidth="1280px" m="auto">
             <header>
-              Navbar
+              <NavBar/>
             </header>
             <main>
               

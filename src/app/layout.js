@@ -6,6 +6,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 import ChakraProviders from "../../components/chakraProvider";
 import NavBar from "../../components/NavBar";
+import Footer from "../../components/Footer";
 
 
 import Head from "next/head";
@@ -48,7 +49,7 @@ export default function RootLayout({ children }) {
               
             </main>
             <footer>
-              Footer
+              <Footer/>
             </footer>
           </Box>
         </ChakraProviders>
